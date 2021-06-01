@@ -1,0 +1,20 @@
+* Kolory HTML
+
+| Kolir   |                                | HEX     |
+|---------+--------------------------------+---------|
+| Aqua    | Morska khvylia                 | #00ffff |
+| Black   | Chornyi                        | #000    |
+| Blue    | Synii                          | #0000ff |
+| Fuchsia | Fuksiia                        | #ff00ff |
+| Gray    | Siryi                          | #808080 |
+| Green   | Zelenyi                        | #008000 |
+| Lime    | Lymonnyi                       | #00ff00 |
+| Maroon  | Temno-bordovyi                 | #800000 |
+| Navy    | Temno-synii                    | #000080 |
+| Olive   | Olyvkovyi                      | #808000 |
+| Purple  | Fioletovyi                     | #800080 |
+| Red     | Chervonyi                      | #ff0000 |
+| Silver  | Sribliastyi                    | #c0c0c0 |
+| Teal    | Zelenuvato-blakytnyi, elektryk | #008080 |
+| White   | Bilyi                          | #fff    |
+| Yellow  | Zhivtyi                        | #ffff00 |
