@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script language="javascript">
+            // Tsi funktsii rozrobleni dlia intehratatsii formy HTML z imiam "FEEDBACK", maiuchyi tekstovi polia Mail and Memo ta nezalezhni peremykachi (checkbox) Speed, Content i Graphic.
+
+            // Vidrahuite WriteCookies() i GetCookies() dlia pratsi z vashymy osobystymy formamy.
+
+            function GetValue(Offset){
+                // otrymannia znachennia cookie po dannomu zmishchenniu
+                var End = document.cookie.indexOf(";", Offset);
+                if (End == -1)
+                End = document.cookie.length;
+
+                // povernuty chastynu cookie zi zmishchenniam vid pochatku i yaka zavershuietsia ';'.
+                return unescape(document.cookie.substring(Offset, End));
+            }
+
+            function GetCookie
+        </script>
+    </body>
+</html>
