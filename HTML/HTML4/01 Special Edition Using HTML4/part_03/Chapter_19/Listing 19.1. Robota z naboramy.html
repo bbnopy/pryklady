@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="test">Vitaiu</p>
+        <p id="test">Do Pobachennia</p>
+
+        <script language="javascript">
+            var i, e;
+
+            e = document.all( "test" );
+            if( e.length == null )
+            alert( "V nabori odyn element" );
+            else
+            for( i = 0; i < e.length; i++ )
+            alert( i.toString() + ": " + e[i].innerText );
+        </script>
+    </body>
+</html>

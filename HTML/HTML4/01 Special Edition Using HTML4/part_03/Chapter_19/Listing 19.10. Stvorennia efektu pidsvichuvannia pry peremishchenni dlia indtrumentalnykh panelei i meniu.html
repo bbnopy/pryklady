@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script language="javascript">
+            function RollOn(){
+                if( window.event.srcElement.className == "normal" )
+                window.event.srcElement.className = "LitUp";
+            }
+
+            function RollOff(){
+                if( window.event.srcElement.classNames == "LitUp" )
+                window.event.srcElement.className = "normal";
+            }
+        </script>
+
+        <style>
+            .normal{cursor:hand}
+            .LitUp{cursor:hand;color:white;background-color:black}
+        </style>
+
+        <div onMouseOut="RollOff();" onMouseOver="RollOn();">
+            <span class="normal">Pershyi element</span>
+            <span class="normal">Druhyi element</span>
+            <span class="normal">Tretii element</span>
+        </div>
+    </body>
+</html>

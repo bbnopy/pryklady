@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example</title>
+        <script language="javascript">
+            function Up() {
+                document.all.item("second", 0).style.posTop -= 10;
+            }
+
+            function Down() {
+                document.all.item("second", 0).style.posTop += 10;
+            }
+
+            function Left() {
+                document.all.item("second", 0).style.posLeft -= 10;
+            }
+
+            function Right() {
+                document.all.item("second", 0).style.posLeft += 10;
+            }
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; top: 200; left: 300; z-order: 2">
+            <b>Tse pershyi shar. Vin zavzhdy zverkhu.</b><br>
+            <b>Tse pershyi shar. Vin zavzhdy zverkhu.</b><br>
+            <b>Tse pershyi shar. Vin zavzhdy zverkhu.</b><br>
+            <b>Tse pershyi shar. Vin zavzhdy zverkhu.</b><br>
+            <b>Tse pershyi shar. Vin zavzhdy zverkhu.</b><br>
+            <b>Tse pershyi shar. Vin zavzhdy zverkhu.</b><br>
+            <b>Tse pershyi shar. Vin zavzhdy zverkhu.</b><br>
+            <b>Tse pershyi shar. Vin zavzhdy zverkhu.</b><br>
+        </div>
+
+        <img src="../images/book.jpg" id="second" style="position: absolute; top: 180; left: 0; z-order: 1">
+
+        <form name="buttons">
+            <table>
+                <tr>
+                    <td></td>
+                    <td align="center">
+                        <input type="button" name="up" value="Up" width="100%" onclick="Up();">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <input type="button" name="left" value="Left" onclick="Left();">
+                    </td>
+                    <td></td>
+                    <td align="center">
+                        <input type="button" name="right" value="Right" width="100" onclick="Right();">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="center">
+                        <input type="button" name="down" value="Down" width="100" onclick="Down();">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -9,17 +9,67 @@
 
             // Vidrahuite WriteCookies() i GetCookies() dlia pratsi z vashymy osobystymy formamy.
 
-            function GetValue(Offset){
+            function GetValue( Offset){
                 // otrymannia znachennia cookie po dannomu zmishchenniu
                 var End = document.cookie.indexOf(";", Offset);
                 if (End == -1)
                 End = document.cookie.length;
 
                 // povernuty chastynu cookie zi zmishchenniam vid pochatku i yaka zavershuietsia ';'.
-                return unescape(document.cookie.substring(Offset, End));
+                return unescape(document.cookie.substring( Offset, End) );
             }
 
-            function GetCookie
+            function GetCookie( Name) {
+                // povernennia znachennia cookie za imiam
+                var Len = Name.length;
+
+                // poshuk usikh podstrok dovzhynoiu, rivnoiu dovzhynoiu imeni cookie, i perevirka na spivpadinnia. Yakshcho znaideno, povernuty yoho znachennia.
+                var i = 0;
+                while (i < document.cookie.length ) {
+                    var j = i + Len + 1;
+                    if (document.cookie.substring(i,j) == (Name + "="))
+                    return GetValue( j );
+                    i = document.cookies.indexOf(" ",i) + 1;
+                    if (  i == 0)
+                    break;
+                }
+                return null;
+            }
+
+            function SetCookie( Name, Value, Expire ) {
+                // stvorennia abo zmina cookie po imeni i znachenniu.
+                // imia i znachennia oboviazkovi; chasu usunennia nemaie. Yakshcho data nevkazana, cookie isnuie lyshe dlia potochnoho seansu.
+                document.cookie = Name + "=" + escape( Value ) + ";expires" + Expire;
+            }
+
+            function WriteCookies() {
+                // zapys usikh cookie dlia formy FEEDBACK
+                var Expire = "Friday,25-Feb-2000 12:00:00 GMT";
+                with ( document.FEEDBACK ) {
+                    SetCookie( "Mali", FEEDBACK_MAIL.Value, Expire );
+                    SetCookie( "How", FEEDBACK_HOW.selectedIndex, Expire );
+                    SetCookie( "Memo", FEEDBACK_MEMO.value, Expire );
+                    SetCookie( "Speed", FEEDBACK_SPEED[0].checked ? "1" : "0", Expire );
+                    SetCookie( "Content", FEEDBACK_CONTENT[0].checked ? "1" : "0", Expire );
+                    SetCookie( "Graphic", FEEDBACK_GRAPHIC[0].checked ? "1" : "0", Expire );
+                }
+            }
+
+            function GetCookie()
+            {
+                // zavantazhyty u formu znachennia cookie
+                with ( document.FEEDBACK ) {
+                    FEEDBACK_MAIL.value = GetCookie( "Mail" );
+                    FEEDBACK_HOW.selectedIndex = GetCookie( "How" );
+                    FEEDBACK_MEMO.value = GetCookie( "Memo" );
+                    FEEDBACK_SPEED[0].checked = GetCookie( "Speed" ) == "1";
+                    FEEDBACK_SPEED[1].checked = GetCookie( "Speed" ) == "0";
+                    FEEDBACK_CONTENT[0].checked = GetCookie( "Content" ) == "1";
+                    FEEDBACK_CONTENT[1].checked = GetCookie( "Content" ) == "0";
+                    FEEDBACK_GRAPHIC[0].checked = GetCookie( "Graphic" ) == "1";
+                    FEEDBACK_GRAPHIC[1].checked = GetCookie( "Graphic" ) == "0";
+                }
+            }
         </script>
     </body>
 </html>

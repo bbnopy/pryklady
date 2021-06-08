@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <style>
+            .help{position:absolute;posTop:0;posLeft:0;border-width: thin;border-style: solid;background-color: yellow;color:black;height: 20;width: 240;}
+        </style>
+
+        <div id="FOArea" class="help" style="display:none"></div>
+
+        <script language="javascript">
+            var HelpX, HelpY, HelpText;
+            var ToShow, ToClear;
+
+            function DoFlyOver(){
+                if( ToClear != 1 ) window.clearTimeout( ToClear );
+
+                FOArea.innerText = HelpText;
+                FOArea.style.posLeft = HelpX + 8;
+                FOArea.style.posTop = HelpY + 8;
+                FOArea.style.display = "";
+
+                ToClear = setTimeout( "ClearFlyOver()", 10000, "javascript");
+            }
+
+            function ClearFlyOver(){
+                FOArea.style.display = "none";
+            }
+
+            function FlyOver( Text ){
+                HelpText = Text;
+                HelpX = window.event.clientX;
+                HelpY = window.event.clientY;
+                ToShow = setTimeout( "DoFlyOver()", 1000, "javascript" );
+            }
+        </script>
+
+        <a onmouseout="ClearFlyOver();" onmouseover="FlyOver( 'Vidkryty pochatkovu storinku Dzherri' );" href="http://rampages.onramp.net/~jerry">Dzherri Khonikatt</a><br>
+
+        <a onmouseout="ClearFlyOver();" onmouseover="FlyOver( 'Vidkryty storinku Microsoft' );" href="http://www.microsoft.com">Microsoft</a>
+    </body>
+</html>

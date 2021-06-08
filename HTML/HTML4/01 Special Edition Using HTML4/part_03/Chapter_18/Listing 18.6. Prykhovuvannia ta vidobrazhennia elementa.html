@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <style type="text/css">
+        #first {position: absolute; top: 80; left: 60}
+        #second {position: absolute; top: 120; left: 200}
+        #third {position: absolute; top: 120; left: 180}
+    </style>
+    <script language="javascript">
+        ShowFirst = true;
+        ShowSecond = false;
+        ShowThird = true;
+        function ToggleFirst() {
+            ShowFirst = !ShowFirst;
+            document.all.item("first", 0).style.visibility = ShowFirst ? "" : "hidden";
+        }
+
+        function ToggleSecond() {
+            ShowSecond = !ShowSecond;
+            document.all.item("second", 0).style.visibility = ShowSecond ? "" : "hidden";
+        }
+
+        function ToggleThird() {
+            ShowThird = !ShowThird;
+            document.all.item("third", 0).style.visibility = ShowThird ? "" : "hidden";
+        }
+    </script>
+    <body>
+        <div id="first">
+            <b>Tse pershii shar. Vin roztashovanyi poseredeni.</b><br>
+            <b>Tse pershii shar. Vin roztashovanyi poseredeni.</b><br>
+            <b>Tse pershii shar. Vin roztashovanyi poseredeni.</b><br>
+            <b>Tse pershii shar. Vin roztashovanyi poseredeni.</b><br>
+            <b>Tse pershii shar. Vin roztashovanyi poseredeni.</b><br>
+            <b>Tse pershii shar. Vin roztashovanyi poseredeni.</b><br>
+            <b>Tse pershii shar. Vin roztashovanyi poseredeni.</b><br>
+            <b>Tse pershii shar. Vin roztashovanyi poseredeni.</b><br>
+        </div>
+
+        <div id="second" style="visibility: hidden">
+            <b>Tse druhyi shar. Vin pozadu pershoho sharu.</b><br>
+            <b>Tse druhyi shar. Vin pozadu pershoho sharu.</b><br>
+            <b>Tse druhyi shar. Vin pozadu pershoho sharu.</b><br>
+            <b>Tse druhyi shar. Vin pozadu pershoho sharu.</b><br>
+            <b>Tse druhyi shar. Vin pozadu pershoho sharu.</b><br>
+            <b>Tse druhyi shar. Vin pozadu pershoho sharu.</b><br>
+            <b>Tse druhyi shar. Vin pozadu pershoho sharu.</b><br>
+            <b>Tse druhyi shar. Vin pozadu pershoho sharu.</b><br>
+        </div>
+
+        <img src="../images/book.jpg" id="third">
+
+        <form name="toggle">
+            <table align="center">
+                <td>
+                    <input type="button" name="first" value="Toggle First Layer" onclick="ToggleFirst();">
+                </td>
+                <td>
+                    <input type="button" name="second" value="Toggle Second Layer" onclick="ToggleSecond();">
+                </td>
+                <td>
+                    <input type="button" name="third" value="Toggle Third Layer" onclick="ToggleThird();">
+                </td>
+            </table>
+        </form>
+    </body>
+</html>

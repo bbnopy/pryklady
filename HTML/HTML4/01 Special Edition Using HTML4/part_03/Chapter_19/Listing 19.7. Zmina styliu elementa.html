@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="test">Tse zvychainyi element HTML</p>
+        <hr>
+        <form action="">
+            Vvedit nazvu fonovoho koloru:
+            <input type="text" id="background" size="20" value="White"><br>
+            Vvedit nazvu holovnoho koloru:
+            <input type="text" id="color" size="20" value="Black">
+            <input type="button" value="Change" onclick="ChangeColor( Background.value, Color.value );">
+        </form>
+
+        <script language="javascript">
+            function ChangeColor( Bacground, Color){
+                test.style.backgroundColor = Background;
+                test.style.color = Color;
+            }
+        </script>
+    </body>
+</html>

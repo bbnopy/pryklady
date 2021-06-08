@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+        <script language="javascript">
+            MoreIsUp = false;
+
+            // vyvesty prykhovanu formu, yakshcho vona shchie ne vyvedena.
+            // v inshomu vypadku, prykhovaty ii.
+            // zminyty takozh mitku na knoptsi, shchob vidobrazyty potochnyi stan prykhovanoi formy.
+
+            function OpenMore(){
+                MoreIsUp = !MoreIsUp;
+                More.style.display = MoreIsUp ? "" : "none";
+                FEEDBACK.FEEDBACK_MORE.value = MoreIsUp ? "Less<<" : "More>>";
+            }
+        </script>
+    </head>
+    <body>
+        <form action="mailto:jerry@honeycutt.com" name="FEEDBACK" method="post">
+            <table cellpadding="10">
+                <tr>
+                    <td valign="top">
+                        <b>Adres vashoi elektronnoi poshty:</b><br>
+                        <input type="text" name="FEEDBACK_MAIL" size="40">
+                    </td>
+                    <td valign="top">
+                        <b>Yak vy znaishly nash vuzol:</b><br>
+                        <select name="FEDDBACK_HOW" size="1">
+                            <option value="1">AltaVista</option>
+                            <option value="2">Excite</option>
+                            <option value="3">Lycos</option>
+                            <option value="4">Yahoo!</option>
+                            <option value="5">WebCrawler</option>
+                            <option value="6">Friend</option>
+                            <option value="7">Other Link</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" rowspan="2">
+                        <b>Shcho vy dumaiete pro nash vuzol:</b><br>
+                        <textarea name="FEEDBACK_MEMO" cols="45" rows="8"></textarea>
+                    </td>
+                    <td valign="top">
+                        <b>Nash reitynh?</b><br>
+                        <table border="1">
+                            <tr align="center">
+                                <th></th><th>Yes</th><th>No</th>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">
+                                    Shvydke zavantazhennia?
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_SPEED">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_SPEED">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">
+                                    Tsikava hrafika?
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_GRAPHIC">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_GRAPHIC">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">
+                                    Vmist vam pidkhodyt?
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_CONTENT">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_CONTENT">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="right">
+                    <td>
+                        <table width="100%">
+                            <td align="left">
+                                <input type="button" name="FEEDBACK_MORE" value="More>>" onclick="OpenMore()">
+                            </td>
+                            <td>
+                                <input type="reset" name="FEEDBACK_RESET" value="Clear">
+                                <input type="submit" name="FEEDBACK_SUBMIT" value="Submit">
+                            </td>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Tsia dilianka mistyt prykhovanu chastynu formy, yaku korystuvach pobachyt, yakshcho klatsnuty More>>. Obrobnyk podii na pochatku tsoho faila pokazuie skrytu chastynu formy.-->
+
+            <div id="More" style="display:none">
+                <table cellpadding="10">
+                    <tr>
+                        <td>
+                            <b>Vvedit URL vashoi pochatkovoi storinky:</b><br>
+                            <input type="text" name="FEEDBACK_URL" size="60">
+                        </td>
+                        <td>
+                            <b>Vvedit vash telefonyi nomer:</b>
+                            <input type="text" name="FEEDBACK_PHONE" size="32">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

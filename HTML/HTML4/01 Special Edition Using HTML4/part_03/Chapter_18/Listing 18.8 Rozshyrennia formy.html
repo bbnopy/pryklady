@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example</title>
+        <script language="javascript">
+            blnMoreIsUp = false;
+            // Pokazaty prykhovanu fihuru, yajshch vona shchie ne pokazana.
+            // V inshomu vypadku prykhovaty ioho.
+            // Zminit tekst na knoptsi, shchob vidobrazyty potochnyi stan prykhovanoi formy.
+            function OpenMore() {
+                blnMoreIsUp = !blnMoreIsUp;
+                document.all.item("MORE", 0).style.visibility = blnMoreIsUp ? "" : "hidden";
+                document.FEEDBACK.FEEDBACK_MORE.value = blnMoreIsUp ? "Less<<" : "More>>";
+            }
+        </script>
+    </head>
+    <body>
+        <form action="mailto:mail@mail.mail" name="FEEDBACK" method="GET" onsubmit="return IsValid()">
+            <table cellpadding="10">
+                <tr>
+                    <td valign="top">
+                        <b>Vedit vashu adresu e-mail:</b><br>
+                        <input type="text" name="FEEDBACK_MAIL" size="40">
+                    </td>
+                    <td valign="top">
+                        <b>Yak vy znaishky nash vuzol:</b><br>
+                        <select name="FEEDBACK_HOW" size="1">
+                            <option value="1">AltaVista</option>
+                            <option value="2">Excite</option>
+                            <option value="3">Lycos</option>
+                            <option value="4">Yahoo!</option>
+                            <option value="5">WebCrawler</option>
+                            <option value="6">Friend</option>
+                            <option value="7">Other Link</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" rowspan="2">
+                        <b>Yak vy otsiniuiete nash Web-vuzol:</b><br>
+                        <textarea name="FEEDBACK_MEMO" cols="45" rows="8"></textarea>
+                    </td>
+                    <td valign="top">
+                        <b>Vashi otsinky?</b><br>
+                        <table border="1">
+                            <tr align="center">
+                                <th></th>
+                                <th>Yes</th>
+                                <th>No</th>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">
+                                    Zavantazhennia dosyt shvydke?
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_SPEED">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_SPEED">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">Vam spodobalysia maliunky?</td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_GRAPHIC">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_GRAPHIC">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">Zmist buv tsikavyi vam?</td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_CONTENT">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_CONTENT">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="right">
+                    <td>
+                        <table width="100%">
+                            <td align="left">
+                                <input type="button" name="FEEDBACK_MORE" value="More>>" onclick="OpenMore()">
+                            </td>
+                            <td>
+                                <input type="reset" name="FEEDBACK_RESET" value="Clear">
+                                <input type="submit" name="FEEDBACK_SUBMIT" value="Submit">
+                            </td>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!-- U tsomu rozdili mistytsia prykhovana chastyna formy, yaku korystuvach pobachyt, yakshcho natysnuty knopku More>>.
+                    Obrobnyk podii na pochatku tsoho faila pokazuie pravylnyi shar. -->
+
+            <div id="more" style="visibility: hidden">
+                <table cellpadding="10">
+                    <tr>
+                        <td>
+                            <b>Vvedit URL vashoi storinky:</b><br>
+                            <input type="text" name="FEEDBACK_URL" size="60">
+                        </td>
+                        <td>
+                            <b>Vvedit vash telefonnyi nomer:</b><br>
+                            <input type="text" name="FEEDBACK_PHONE" size="32">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Data Binding Example</title>
+    </head>
+    <body>
+        <object id="tdc" classid="classid:333c7bc4-460f-11d0-bc04-0080c7055a83" width="0" height="0">
+            <param name="DataURL" value="MyData.txt">
+            <param name="TextQualifier" value=",">
+            <param name="useHeader" value="true">
+        </object>
+
+        <table id="table" datasrc="#tdc" border="1">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span datafld="title"></span></td>
+                    <td><span datafld="date"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

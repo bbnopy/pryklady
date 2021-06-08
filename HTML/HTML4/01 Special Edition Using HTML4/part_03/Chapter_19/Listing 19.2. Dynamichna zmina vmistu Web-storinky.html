@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="test">Example Texr</p>
+
+        <form action="">
+            <input type="button" id="click" value="click" onClick="ChangeText();">
+        </form>
+
+        <script language="javascript">
+            function ChangeText(){
+                test.innerText = "Dynamichna pobudova tekstu";
+                window.alert( "Novyi tekst" );
+
+                test.innerHTML = "Dynamichna pobudiva <strong> kodu HTML</strong>";
+                window.alert( "Novyi kod HTML" );
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Data Binding Example</title>
+    </head>
+    <body>
+        <object id="tdc" classid="classid:333c7bc4-460f-11d0-bc04-0080c7055a83" width="0" height="0">
+            <param name="DataURL" value="MyData.txt">
+            <param name="TextQualifier" value=",">
+            <param name="useHeader" value="true">
+        </object>
+
+        <script language="javascript">
+            Sub RefreshTable()
+
+            ' Vyznachte yak sortuvaty
+
+            TDC.SortAscending = True
+            TDC.SortColumn = SortFrm.Column.Value
+
+            ' Vyznachte yak filtruvaty
+
+            If SortFrm.Category.Value = "" Then
+            sortFrm.Category.Value = "*"
+            End If
+
+            TDC.FilterColumn = "Category"
+            TDC.FilterValue = SortFrm.Category.Value
+            TDC.FilterCriterion = "="
+
+            ' Onovyty tablytsiu
+
+            TDC.Reset()
+            End Sub
+        </script>
+
+        <table>
+            <form name="sortfrm">
+                <tr>
+                    <td>Sort by:</td>
+                    <td>Category:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="column" size="10">
+                    </td>
+                    <td>
+                        <input type="text" name="category" value="*" size="10">
+                    </td>
+                    <td>
+                        <input type="button" name="sort" value="Sort" onclick="CallSortTable()">
+                    </td>
+                </tr>
+            </form>
+        </table>
+
+        <table id="table" datasrc="#tdc" border="1">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Title/Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2"><span datafld="category"></span></td>
+                    <td><span datafld="title"></span></td>
+                </tr>
+                <tr>
+                    <td><span datafld="date"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

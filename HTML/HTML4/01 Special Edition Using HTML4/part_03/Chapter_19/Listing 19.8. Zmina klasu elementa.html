@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+        <style>
+            .normal{background-color:white;color:black}
+            .reverse{background-color:black;color:white}
+        </style>
+    </head>
+    <body>
+        <p id="test" class="normal">Tse zvychainyi element HTML</p>
+        <hr>
+        <form action="">
+            Klatsnit po knoptsi, shchob zminyty styl:
+            <input type="button" value="Change" onclick="ChangeColor();">
+        </form>
+
+        <script language="javascript">
+            function ChangeColor(){
+                if( test.className == "normal" )
+                test.className = "reverse";
+                else
+                test.className = "normal";
+            }
+        </script>
+    </body>
+</html>

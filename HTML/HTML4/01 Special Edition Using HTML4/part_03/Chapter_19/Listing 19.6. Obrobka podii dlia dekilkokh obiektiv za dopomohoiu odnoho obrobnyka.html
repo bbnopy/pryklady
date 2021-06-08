@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body onclick="alert( 'Klats!' );">
+        <script language="javascript">
+            function LinkClick(){
+                if( window.event.srcElement.id == "1" ){
+                    window.alert( "Vy klatsnuly na pershomu elementi" );
+                    window.event.cancelBubble = true;
+                }
+                else
+                id( window.event.srcElement.id == "2" ){
+                    window.alert( "Vy klatsnuly na druhomu elementi" );
+                    window.event.cancelBubble = true;
+                }
+                else
+                if( window.event.srcElement.id == "3" ){
+                    window.alert( "Vy klatsnuly na tretomu elementi" );
+                    window.event.cancelBubble = true;
+                }
+            }
+        </script>
+
+        <div onclick="LinkClick();">
+            <span id="1">Pershyi element</span>
+            <span id="2">Druhyi element</span>
+            <span id="3">Tretii element</span>
+        </div>
+    </body>
+</html>

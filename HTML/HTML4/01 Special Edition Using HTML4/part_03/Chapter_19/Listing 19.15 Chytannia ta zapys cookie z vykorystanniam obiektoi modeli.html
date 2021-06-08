@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+        <script language="javascript">
+            MoreIsUp = false;
+
+            // Shchob vyvesty prykhovanu formu, yakshcho ii shchie ne rozvodiat.
+            // Zminyty pidpys na knoptsi, shchob vidobrazyty potochnyi stan prykhovanoi formy.
+
+            function OpenMore() {
+                MoreIsUp = !MoreIsUp;
+                More.style.display = MoreIsUp ? "" : "none";
+                FEEDBACK.FEEDBACK_MORE.value = MoreIsUp ? "Less<<" : "More>>";
+            }
+        </script>
+        <script language="javascript">
+            // Prochytaty znachennia cookie z vkazannym zmishenniam.
+
+            function GetValue(Offset) {
+                var End = document.cookie.indexOf(";", Offset);
+                if (End == -1)
+                    End = document.cookie.length;
+
+                // Povernuty chastynu cookie, pochynaiuchy zi zmishennia s zakinchuiuchy ";".
+
+                return unescape(document.cookie.substring(Offset, End));
+            }
+
+            // Povernennia znachennia cookie z zadannym imiam.
+
+            function GetCookie(Name) {
+                var Len = Name.length;
+
+                // Perevirte usi pidrozdily, yaki dovho dorivniuiut dovzhyni imeni failu cookie dlia vidpovidnosti.
+                // Yakshcho znaideno, prochytaite vartist i vidshkoduiut ii.
+
+                var i = 0;
+                while (i < document.cookie.length) {
+                    var j = i + Len + 1;
+                    if (document.cookie.substring(i, j) == (Name + "="))
+                        return GetValue(j);
+                    i = document.cookie.indexOf(" ", i) + 1;
+                    if (i == 0)
+                        break;
+                }
+                return null;
+            }
+
+            // Stvorit abo zminit fail cookie, vdavshy imia ta znachennia.
+            // Smia ta znachennia potribni, a data zastarivannia nit.
+            // Zauvazhte, shcho yakshcho data zastarivannia ne vkazana, cookie isnuvatyme lyshe pid chas potochnoho seansu.
+
+            function SetCookie(Name, Value, Expire) {
+                document.cookie = Name + "=" + escape(value) + ";expires=" + Expire;
+            }
+
+            // Zapysaty usi cookie dlia formy FEEDBACK.
+
+            function WriteCookies() {
+                var Expire = "Friday, 25-Feb-2021 12:00:00 GMT";
+
+                with (document.FEEDBACK) {
+                    SetCookie("Mail", FEEDBACK_MAIL.value, Expire);
+                    SetCookie("How", FEEDBACK_HOW.selectedIndex, Expire);
+                    SetCookie("Memo", FEEDBACK_MEMO.value, Expire);
+                    SetCookie("Speed", FEEDBACK_SPEED[0].checked ? "1" : "0", Expire);
+                    SetCookie("Content", FEEDBACK_CONTENT[0].checked ? "1" : "0", Expire);
+                    SetCookie("Graphic", FEEDBACK_GRAPHIC[0].checked ? "1" : "0", Expire);
+                }
+            }
+
+            // Zapovnyty formy znachenniamy iz cookie.
+
+            function GetCookies() {
+                with (document.FEEDBACK) {
+                    FEEDBACK_MAIL.value = GetCookie("Mail");
+                    FEEDBACK_HOW.selectedIndex = GetCookie("How");
+                    FEEDBACK_MEMO.value = GetCookie("Memo");
+                    FEEDBACK_SPEED[0].checked = (GetCoolie("Speed") == "1");
+                    FEEDBACK_SPEED[1].checked = (GetCookie("Speed") == "0");
+                    FEEDBACK_CONTENT[0].checked = (GetCookie("Content") == "1");
+                    FEEDBACK_CONTENT[1].checked = (GetCookie("Content") == "0");
+                    FEEDBACK_GRAPHIC[0].checked = (GetCookie("Graphic") == "1");
+                    FEEDBACK_GRAPHIC[1].checked = (GetCookie("Grapjic") == "0");
+                }
+            }
+
+            function IsValid() {
+                blnValid = true;
+                with (document.FEEDBACK) {
+                    if (FEEDBACK_MAIL.value == "") {
+                        window.alert("Vvedit, budlaska, poshtovyi adres");
+                        blnValid = false;
+                    }
+
+                    if (!(FEEDBACK_SPEED[0].checked || FEEDBACK_SPEED[1].checked) ||
+                        !(FEEDBACK_CONTENT[0].checked || FEEDBACK_CONTENT[1].checked) ||
+                        !(FEEDBACK_GRAPHIC[0].checked || FEEDBACK_GRAPHIC[1].checked)) {
+                        window.alert("Budlaska, vyberyte Yes abo No dlia kozhnoi otsinky");
+                        blnValid = false;
+                    }
+                }
+
+                if (blnValid)
+                    WriteCookies();
+                return blnValid;
+            }
+        </script>
+    </head>
+    <body onLoad="GetCookies();">
+        <form action="" name="FEEDBACK" method="PAST" onsubmit="return IsValid();">
+            <table cellpadding="10">
+                <tr>
+                    <td valign="top">
+                        <b>Adresa vashoi elektronoi poshty:</b><br>
+                        <input type="text" name="FEEDBACK_MAIL" size="40">
+                    </td>
+                    <td valign="top">
+                        <b>Yak vy znaishly nash vuzol?:</b><br>
+                        <select name="FEEDBACK" size="1">
+                            <option value="1">AltaVista</option>
+                            <option value="2">Excite</option>
+                            <option value="3">Lycos</option>
+                            <option value="4">Yahoo!</option>
+                            <option value="5">WebCrawler</option>
+                            <option value="6">Friend</option>
+                            <option value="7">Other Link</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" rowspan="2">
+                        <b>Shcho vy dumaiete pro nash vuzol?:</b><br>
+                        <textarea name="FEEDBACK_MEMO" cols="45" rows="8"></textarea>
+                    </td>
+                    <td valign="top">
+                        <b>Vasha otsinka?</b><br>
+                        <table border="1">
+                            <tr align="center">
+                                <th></th>
+                                <th>Yes</th>
+                                <th>No</th>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">
+                                    Zahruzka dostatno shvydka?
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_SPEED">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_SPEED">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">Maliunky tsikavi?</td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_GRAPHIC">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_GRAPHIC">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="left">Vmist pidkhodiachyi?</td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_CONTENT">
+                                </td>
+                                <td>
+                                    <input type="radio" name="FEEDBACK_CONTENT">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="right">
+                    <td>
+                        <table width="100%">
+                            <td align="left">
+                                <input type="button" name="FEEDBACK_MORE" value="More" onclick="OpenMore()">
+                            </td>
+                            <td>
+                                <input type="reset" name="FEEDBACK_RESET" value="Clear">
+                                <input type="submit" name="FEEDBACK_SUBMIT" value="Submit">
+                            </td>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Tsia oblast mistyt prykhovanu chastynu formy, yaku bachyt korystuvach,
+                yakshcho vony natyskaty knopku More>>. Obrobnyk podi na pochatku tsoho faila pokazuie riven. -->
+
+            <div id="more" style="display: none">
+                <table cellpadding="10">
+                    <tr>
+                        <td>
+                            <b>Vvedit adresu URL vashoi navchalnoi storinky:</b><br>
+                            <input type="text" name="FEEDBACK_PHONE" size="32">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script language="javascript">
+            function outlineClick(){
+                var Source, Targets, i;
+
+                Source = window.event.srcElement;
+                if( Source.className == "Outline" ){
+                    Targets = document.all(Source.id).children;
+                    if( Targets.length != 0 && Targets[0]/style.display == "none" )
+                    Expand( Source.id );
+                    else
+                    Collapse( Source.id );
+
+                    window.event.cancelBubble = true;
+                }
+            }
+
+            function Expand( Level ){
+                var i, Target;
+
+                i = 1;
+                Target = document.all( Level + i.toString() );
+                while( Target != null ){
+                    Target.style.display = "";
+                    i++;
+                    Target = document.all( Level + i.toString() );
+                }
+            }
+
+            function Collapse( Level ){
+                var i, Target;
+
+                if( document.all( Level ).childer.length == 0 )
+                return false;
+                else {
+                    i = 1;
+                    Target = document.all( Level + i.toString() );
+                    while( Target != null ){
+                        Collapse( Target.id );
+                        Target.style.display = "none";
+                        i++;
+                        Target = document.all( Level + i.toString() );
+                    }
+                }
+            }
+        </script>
+
+        <style>
+            .Outline{cursor: hand}
+        </style>
+
+        <div onclick="OutlineClick();">
+            <ul id="ol" class="Outline">
+                Rozdil (klatsnit dlia rozhortuvannia rozdilu)
+                <ul id="ol1" class="Outline" style="display:none">
+                    Pershyi rozdil
+                    <p id="ol11" class="Outline" style="display:none">
+                        Mozhlyvo stvoryty skilky zavhodno skladno iierarkhichnu strukturu.<br>
+                        Dlia tsoho neobkhidno vykorystovuvaty vidpovidno<br>
+                        indefikatory i vkliuchyty kozhen element rozdilu<br>
+                        u klasi Outline, todi struktura bude pratsiuvaty sama.<br>
+                        Skopiiuite stsenarii z tsoho prykladu do vashoho failu HTML.<br>
+                        Vy mozhete vykorystaty tsei stsenarii z bud-yakymy deskryptoramy HTML.<br>
+                        Tut vykorystovuietsia deskryptor UL dlia zabezpechennia<br>
+                        avtomatychnoho vidstupu kozhnoho rivnia.
+                    </p>
+                    <ul id="ol12" class="Outline" style="display:none">Pidrozdil pershoho rozdilu</ul>
+                    <ul id="ol13" class="Outline" stylle="display:none">
+                        Druhyi pidrozdil pershoho rozdilu
+                        <ul id="ol131" class="Outline" style="display:none">Test 1</ul>
+                        <ul id="ol132" class="Outline" style="display:none">Test 2</ul>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+    </body>
+</html>

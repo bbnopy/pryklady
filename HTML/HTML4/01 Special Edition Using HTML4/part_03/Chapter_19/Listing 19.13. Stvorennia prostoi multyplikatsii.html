@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body onclick="ChangeDirection()">
+        <script language="javascript">
+            var Timer;
+            var Hdir = 1;
+            var Vdir = 1;
+
+            function Ding(){
+                Ani.style.posTop += Vdir * 10;
+                Ani.style.posLeft += Hdir * 10;
+                Timer = window.setTimeout( "Ding()", 500, "javascript" );
+            }
+
+            Timer = window.setTimeout( "Ding()", 500, "javascript" );
+
+            function ChangeDirection(){
+                if( window.event.clientX < Ani.style.posLeft )
+                Hdir = -1;
+                else
+                Hdir = 1;
+
+                if( window.event.clientY < Ani.style.posTop )
+                Vdir = -1;
+                else
+                Vdir = 1;
+            }
+        </script>
+
+        <div id="Ani" style="position:absolute;left:0;top:0">
+            Tsei teks peremishuietsia po ekranu.
+        </div>
+    </body>
+</html>

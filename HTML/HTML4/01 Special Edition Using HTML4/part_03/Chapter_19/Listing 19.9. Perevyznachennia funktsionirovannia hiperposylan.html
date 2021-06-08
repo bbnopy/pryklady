@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body onmouseover="RollOn();" onmouseout="RollOff();">
+        <style>
+            a{color:blue;font-size: smaller;font-family: arial;font-weight: bold;text-decoration: none;}
+            a.LitUp{color: red;font-size: smaller;font-family: arial;font-weight: bold;text-decoration: underline;}
+        </style>
+
+        <script language="javascript">
+            function RollOn(){
+                if( window.event.srcElement.tagName != "A" ) return;
+
+                if( window.event.srcElement.className == "" )
+                window.event.srcElement.className = "LitUp";
+            }
+
+            function RollOff(){
+                if( window.event.srcElement.className == "LitUp" )
+                window.event.srcElement.className = "";
+            }
+        </script>
+
+        Vidvidaite <a href="http://rampages.onramp.net/~jerry">Web-vuzol Jerry</a>
+        Mozhete takozh vidvidaty moi yulibleni Web-vuzly:
+        <ul>
+            <li><a href="http://www.microsoft.com">Microsoft Corporation</a></li>
+            <li><a href="http://www.netscape.com">Netscape Corporation</a></li>
+        </ul>
+    </body>
+</html>
