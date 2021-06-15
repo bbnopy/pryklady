@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Prodazh knyh</title>
+    </head>
+    <body>
+        <server>
+            cursor = database.cursor ("SELECT * FROM BOOKS
+            WHERE isbn=" + request.isbn,TRUE);
+            // move onto selected row
+            cursor.next();
+            cursor.quantityOnHand = cursor.quantityOnHand - request.quantity;
+            cursor.updateRow(books);
+        </server>
+        <p>
+        <h1>Operatsiiu zaversheno</h1>
+        </p>
+        <p>
+            <server>
+                write ("Prodano " + request.quantity + " knyh " + request.isbn + ".");
+            </server>
+        </p>
+        <a href="home.html">Home</a>
+    </body>
+</html>

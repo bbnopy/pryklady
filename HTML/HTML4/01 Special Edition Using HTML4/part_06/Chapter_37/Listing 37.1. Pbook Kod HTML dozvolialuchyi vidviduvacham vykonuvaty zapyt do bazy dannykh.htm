@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Telefona knyha iz zvychainykh failiv</title>
+    </head>
+    <body>
+        <h1>Vasha telefonna knyha iz zvychainykh failiv</h1>
+        <hr>
+        <h2>Vvedennia informatsii</h2>
+        <form action="/cgi-bin/pbook.pl" method="post">
+            <pre>
+                    Imia:           <input type="text" name="frame">
+                    Prizvyshe:      <input type="text" name="lname">
+                    Nomer telefona: <input type="text" name="phone">
+                </pre>
+            <input type="hidden" name="act" value="add">
+            <input type="submit" value="Add to Phonebook">
+        </form>
+        <hr>
+        <p>
+        <h2>Vidobrazhennia informatsii</h2>
+        <form action="cgi-bin/pbook.bat" method="post">
+            <input type="hidden" name="act" value="display">
+            Natysnit na knoplu <input type="submit" value="display">,
+            shchob perehlianuty vsi zapysy telefonnoi knyhy
+        </form>
+        <hr>
+        <p>
+        <h2>Poshuk v telefonii knyhi</h2>
+        <form action="/cgi-bin/pbook.bat" method="post">
+            Vvedennia kliuchove slovo dlia poshuku: <input type="text" name="keyword">
+            <input type="hidden" name="act" value="search">
+            <input type="submit" value="Start Search">
+        </form>
+        </p>
+        </p>
+    </body>
+</html>

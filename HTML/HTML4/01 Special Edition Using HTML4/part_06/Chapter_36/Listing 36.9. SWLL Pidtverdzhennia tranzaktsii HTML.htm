@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Prodazh knyh</title>
+    </head>
+    <body>
+        cursor = database.cursor("SELECT title,isbn,retailPrice,
+        publishers.name,quanityOnHand FROM books, publishers
+        WHERE isbn=" + request.isbn +" AND publishers.ID = books.publisherID");
+        if (cursor.next()) {
+        if (cursor.quantityOnHand > request.quantity) {
+        write ("<form action=sold.html method=get>");
+            write ("<p>Confirm sale of <strong>" + request.copies +
+                </strong> of <br>" + cursor.title + "<br>ISBN " +
+                cursor.isbn + "<br>Publisher " +
+                cursor.name</p>");
+            write ("<input type=submit name=submit value=yes>");
+            write ("<input type=button name=home value=no onclick="redirect('home.html');">");
+            write ("<input type=hidden name=isbn value" +request.quantity + ">" ); write ("</form>");
+            }
+            else
+            write ("<p>Na skladi maie lyshe " + cursor.quantityOnHand + " ekzempliarov.</p>");
+            }
+            else
+            {
+            write ("<p>ISBN " + request.isbn + " nit v bazi dannykh. </p>);
+            }
+    </body>
+</html>

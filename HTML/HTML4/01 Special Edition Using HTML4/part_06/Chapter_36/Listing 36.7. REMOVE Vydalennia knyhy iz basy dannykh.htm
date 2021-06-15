@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Vydalennia zapysiv iz bazy dannykh</title>
+    </head>
+    <body>
+        <server>
+            if (request.isbn != null) {
+            cursor = database.cursor ("SELECT * FROM books
+            WHERE isbn ="+ request.isbn,TRUE);
+            cursor.deleteRow(books)
+            }
+            redirect("delTitle.html");
+        </server>
+    </body>
+</html>

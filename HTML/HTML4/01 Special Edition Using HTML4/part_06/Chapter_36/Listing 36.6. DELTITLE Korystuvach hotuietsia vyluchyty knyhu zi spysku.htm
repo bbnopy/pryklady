@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Vydalennia knyhy</title>
+    </head>
+    <body>
+        <server>
+            cursor = database.cursor(SELECT isbn, title,
+            retailPrise, publishers.name FROM books,
+            publishers WHERE books.publisherID =
+            publishers.ID ORDER BY isbn");
+        </server>
+        <table border>
+            <caption>
+                <center>
+                    <p>
+                        <b>
+                            <font size="+1">Knyhy otsortovani po ISBN</font>
+                        </b>
+                    </p>
+                </center>
+            </caption>
+            <tr>
+                <th>ISBN</th>
+                <th>Nazva</th>
+                <th>Rozdribna tsina</th>
+                <th>Vydavnytstvo</th>
+            </tr>
+            <center>
+                <p>
+                    <server>
+                        while (cursor.next()) {
+                        write("<tr>
+                            <td><a href='remove.html?isbn=' "+cursor.isbn+" </a></td>
+                            <td>"+cursor.title+"</td>
+                            <td>"+cursor.retailPrice+"</td>
+                            <td>"+cursor.name+"</td>
+                        </tr>");
+                        }
+                    </server>
+                </p>
+            </center>
+        </table>
+    </body>
+</html>

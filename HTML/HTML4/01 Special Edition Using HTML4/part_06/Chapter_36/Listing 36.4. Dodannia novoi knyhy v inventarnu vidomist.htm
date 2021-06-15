@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Dodannia novoi knyhy</title>
+        <meta name="GENERATOR" content="Mozilla/2.0Gold (Win32)">
+    </head>
+    <body>
+        <h1>Dodannia novoi knyhy</h1>
+        <p>Prymitka: <b>Vsi</b> polia ie oboviazkovymy dlia dodavannia novoi knyhy.</p>
+        <form action="add.html" method="post">
+            <br>Nazva:
+            <br><input type="text" name="title" size="50">
+            <br>ISBN:
+            <br><input type="text" name="isbn" size="10">
+            <br>Rozdribna tsina:
+            <br><input type="text" name="retailPrice" size="6">
+            <br>Vydavnytstvo
+            <select name="publisherID">
+                <server>
+                    publisherCursor = database.cursor("SELECT id, name FROM publishers
+                    ORDER BY name");
+                    while (publisherCursor.next()) {
+                    write("<option value="+publisherCursor.id+">"+publisherCursor.name);
+                        }
+                </server>
+            </select>
+            <br>
+            <input type="submit" value="Enter">
+            <input type="reset" value="Clear">
+        </form>
+        <p>
+            <a href="home.html">Home</a>
+        </p>
+    </body>
+</html>

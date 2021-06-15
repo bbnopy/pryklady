@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Dodannia knyhy do bazy dannykh</title>
+        <meta name="GENERATOR" content="Mozilla/2.0Gold (Win32)">
+    </head>
+    <body>
+        <server>
+            cursor = database.cursor("SELECT * FROM books",TRUE);
+            cursor.isbn = request.isbn;
+            cursor.title = request.title;
+            cursor.retailPrice = request.retailPrice;
+            cursor.publisherID = request.publisherID;
+            cursor.quantity_on_hand = 0;
+            cursor.updateRow(books);
+            redirect("addTitle.html")
+        </server>
+    </body>
+</html>

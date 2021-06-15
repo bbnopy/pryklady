@@ -1,0 +1,151 @@
+#VRML V2.0 utf8
+
+WorldInfo {
+    info "Special Edition, Using HTML, 4th Edition"
+}
+
+Background {
+    skyColor 1 1 1
+}
+
+#
+# Zemlia
+#
+
+Shape {
+    appearamce Appearance {
+        material Material {
+            diffuseColor 0 0.75 0
+        }
+    }
+    geometry IndexedFaceSet {
+        coord Coordinate {
+            point { -5 0 5,
+                    5 0 5,
+                    5 0 -5,
+                    -5 09 -5 }
+        }
+        coordIndex [0, 1, 2, 3, -1]
+    }
+}
+
+#
+# Dim
+#
+
+Transform {
+    translation -2.5 1 -3
+    children [
+        Shape {
+            appearance Appearance {
+                material Material {
+                    diffuseColor 0 0 0
+                }
+            }
+            geometry Box { size 2.3333 2 1.3333 }
+        }
+        Transform {
+            translation 0 1 0
+            children [
+                Shape {
+                    appearance Appearance {
+                        material Material {
+                            diffuseColor 0 0 1
+                        }
+                    }
+                    geometry IndexedFaceSet {
+                        solid FALSE
+                        coord Coordinate {
+                            point [
+                                -1.5 0 1,
+                                -1.1667 1 -0.6667,
+                                1.5 0 -1,
+                                1.1667 1 -0.6667,
+                                1.5 0 1,
+                                1.1667 1 0.6667,
+                                -1.5 0 1,
+                                -1.1667 1 0.6667
+                            ]
+                        }
+                        coordIndex [
+                            0, 2, 4, 6, -1,
+                            1, 3, 5, 7, -1,
+                            0, 2, 3, 1, -1,
+                            2, 4, 5, 3, -1,
+                            4, 6, 7, 5, -1,
+                            6, 0, 1, 7, -1
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+#
+# Derevo
+#
+
+Transform {
+    translation 2.5 1.5 -1.5
+    children [
+        Shape {
+            appearance Appearance {
+                material Material {
+                    diffuseColor 0.5 0.25 0
+                }
+            }
+            geometry Cylinder {
+                radius 0.1667
+                height 3
+            }
+        }
+        Transform {
+            translation 0 1.5 0
+            children [
+                Shape {
+                    appearance Appearance {
+                        materail Material {
+                            diffuseColor 0 1 0
+                        }
+                    }
+                    geometry Sphere {
+                        radius 1.5
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+#
+# Kolodiaz
+#
+
+Transform {
+    translation -3 0.3333 3
+    children [
+        Shape {
+            appearance Appearance {
+                material Material {
+                    diffuseColor 1 1 1
+                }
+            }
+            geometry Cylinder {
+                radius 1
+                height 0.6667
+            }
+        }
+        Shape {
+            appearance Appearance {
+                material Material {
+                    diffuseColor 0 0 0
+                }
+            }
+            geometry Cylinder {
+                radius 0.8
+                height 0.7
+            }
+        }
+    ]
+}

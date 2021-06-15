@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Pryklad elementa robochoho stolu</title>
+        <style type="text/css">
+            h1 {
+                font-family: sans-serif;
+                font-size: 14
+            }
+            .normal {
+                color: blue;
+                font-family: sans-serif;
+                font-size: 12;
+                font-weight: bold
+            }
+            .hilite {
+                color: red;
+                font-family: sans-serig;
+                font-size: 12;
+                font-weight: bold
+            }
+        </style>
+    </head>
+    <script language="vbscript">
+        Sub MouseOver()
+        If window.event.srcElement.tagName = "A" Then
+        window.event.srcElement.className = "hilite"
+        End If
+        End Sub
+
+        Sub MouseOut()
+        If window.event.srcElement.tagName = "A" Then
+        window.event.srcElement.className = "normal"
+        End If
+        End Sub
+    </script>
+    <body>
+        <h1 akign="right">Zviazok z pochatkom storinky Dzherri:</h1>
+        <div style="border: 1px solid black" align="right" onmouseover="call MouseOver()" onmouseout="call MouseOut()">
+            <p><a href="http://rampages.onramp.net\~jerry" class="normal">Pochatkova storinka</a></p>
+            <p><a href="http://rampages.onramp.net\~jerry\books.html" class="normal">Spysok knyh</a></p>
+            <p><a href="http://rampages.onramp.net\~jerry\bio.html" class="normal">Biohraphiia i reziume</a></p>
+            <p><a href="http://rampages.onramp.net\~jerry\essays.html" class="normal">Alfavitnyi vkazivnyk tvoriv</a></p>
+        </div>
+    </body>
+</html>

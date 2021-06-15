@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>ES3.0 TEST: $$banner</title>
+    </head>
+    <body bgcolor="$$background">
+        <table width="100%">
+            <tr>
+                <td align="left">
+                    <img src="$$logo">
+                </td>
+                <td align="right">
+                    <h1>$$sitename</h1>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        To search for an article, choose a subject, then enter a single word, several words, or a phrase. You can get <a href="$$help">search tips</a> or perform an <a href="/ns-search?NS-query-pat=/text/NS-advquery.pat">advansed search.</a>
+        <table cellpadding="5">
+            <tr>
+                <td align="right">
+                    <b>Subject: </b>
+                </td>
+                <form action="/ns-search?NS-search-page-results" method="POST">
+                    <input type="hidden" name="NS-search-type" value="NS-boolean-query">
+                    <input type="hidden" name="NS-max-records" value="$$NS-max-records">
+                    <td>$$NS-collection-list-dropdown</td></tr>
+                    <tr>
+                        <td align="right">
+                            <b>Search for: </b>
+                        </td>
+                        <td align="left">
+                            <input type="submit" name="NS-query" size="40" value="$$NS-query">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="submit" value="Search">
+                        </td>
+                    </tr>
+                </form>
+            </tr>
+        </table>
+        <hr>
+        <b>
+            <font size="-1">$$copyright</font>
+        </b>
+    </body>
+</html>

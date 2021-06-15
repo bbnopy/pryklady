@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script language="javascript">
+            function changeColor()
+            {
+                var color = document.all.blinkText.style.color;
+
+                if (color == "red")
+                color = "black";
+                else
+                color = "red";
+
+                document.all.blinkText.style.color = color;
+                window.tm=setTimeout('changeColor()',500);
+            }
+        </script>
+    </body>
+</html>

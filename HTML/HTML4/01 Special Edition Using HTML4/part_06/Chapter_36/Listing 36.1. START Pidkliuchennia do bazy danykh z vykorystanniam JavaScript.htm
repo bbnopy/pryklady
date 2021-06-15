@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Pochatok dodatku optovoi torhivli knyhamy</title>
+    </head>
+    <body>
+        <server>
+            if (!database connected())
+            database.connect("INFORMIX", "myserver",
+            "mmorgan", "ASecretWord", "booksDemo")
+            if (database.connected())
+            write("Pomylka: Ne mozhu pidkliuchytysia do bazy danykh.")
+            else {
+            redirect ("home.html")
+            }
+        </server>
+    </body>
+</html>

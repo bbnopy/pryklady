@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script language="javascript">
+            function needNetcaster() {
+                window.open("http://netcaster.netscape.com/finder/need-netcaster.html", "need_netcaster","width=500,height=400,titlebar=yes,toolbar=no,location=no,directories=no,status=yes,menubar=no.scrollbar=yes");
+            }
+
+            function addChannelAPI() {
+                needNetcaster();
+            }
+        </script>
+
+        <script language="javascript1.2">
+            var chanURL = "http://www.myserver.com/channel/home";
+            var chanName ="My Channel";
+            var chanIntervalTime = 720;
+            var chanMaxCacheSize = 1048576;
+            var chanDepth = 3;
+            var chanActive = 1;
+            var chanMode = "window";
+            var chanType = 1;
+
+            var getChannelObject = null;
+            var addChannel = null;
+            var nc = null;
+            var ncActive = 0;
+            var poller = null;
+
+            function activateNetcaster() {
+                nc.activate();
+            }
+            function pollActive() {
+                if (nc.active) {
+                    ncActive=1;
+                    setTimeout(addChannelAPI,10000);
+                    clearInterval(poller);
+                }
+            }
+
+            function netcasterSniffer() {
+                if (!components["netcaster"]) {
+                    alert("This page requires the Netcaster component.");
+                    needNetcaster();
+                }
+                else {
+                    nc = components["netcaster"];
+                    if (nc.active == false) {
+                        activateNetcaster();
+                        poller=setInterval(pollActive,500);
+                    }
+                    else {
+                        ncActive = 1;
+                        addChannelAPI();
+                    }
+                }
+            }
+
+            function addChannelAPI() {
+                if (ncActive == 0) netcasterSniffer();
+                else {
+                    nc = components["netcaster"];
+                    import nc.getChannelObjectct;
+                    import nc.addChannel;
+                    var chan = getChannelObject();
+                    chan.url = chanURL;
+                    chan.name = chanName;
+                    chan.intervalTime = chanIntervalTime;
+                    chan.maxCacheSize = chanMaxChacheSize;
+                    chan.depth = chanDepth;
+                    chan,active = chanActive;
+                    chan.mode = chanMode;
+                    chan.type = chanType;
+                    addChanel(chan);
+                }
+                ncActive = 0;
+            }
+
+            function clickImg() {}
+        </script>
+        <table>
+            <tr>
+                <td align="center">
+                        <a href="#" onclick="addChannelAPI(); clickImg(); return(false);">
+                            <img src="http://home.netscape.com/inserts/images/ncnow.gif" alt="Add My Channel Now!" name="ncnowimage" width="117" height="55" border="0"><br>
+                            Add My Channel Now!
+                        </a>
+                </td>
+            </tr>
+        </table>
+
+        <script language="javascript1.1">
+            // This code helps Netscape track use of button
+            document.ncnowimage.src="http://home.netscape.com/inserts/images/ncnow.gif?"+document.location;
+            function clickImg() {
+                document.ncnowimage.src="http://home.netscape.com/inserts/images/ncnow.gif?AddedChannelNmae=My%20Channel&AddChannelURL=http://www.myserver.com/channel/home";
+            }
+        </script>
+    </body>
+</html>

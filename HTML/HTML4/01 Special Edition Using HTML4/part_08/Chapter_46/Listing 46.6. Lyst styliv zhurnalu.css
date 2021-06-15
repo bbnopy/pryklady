@@ -1,0 +1,34 @@
+/*****************************************************
+* Lyst styliv zhurnal
+*****************************************************/
+
+/* Zahalmni styli */
+body{font:12pt garamond, times; color:black;}
+li{font:12pt garamonf, times; color:black;}
+
+/* Zahalovky storinok */
+.red{font:bold 28pt garamond, times; color:#800000;}
+.green{font:bold 28pt garamond, times; color:#008000;}
+.blue{font: bold 28pt garamond, times; color:#000080;}
+
+/* Styli pryviazok */
+a.normal{font:12pt garamond, times; color:blue;}
+a.small{font:8pt garamond, times; color:blue;}
+a.large{font:bold 18pt garamond, times; color:blue; text-decoration:none;}
+
+/* Pidzaholovok storinky */
+.conheads{font-size:14pt; font-weight:bold; color:red;}
+
+/* Avtorski prava */
+.legaltext{font-size:8pt; color:#800000;}
+a.legal{font:8pt garamond, times; color:blue;}
+
+/* Riadky z imenamy avtora */
+.byline{font:bold 12pt garamond, times; color:black;}
+.whitebyline{font:bold 12pt garamond, times; color:white;}
+
+/* Spetsialnyi tekst tila dokumenta */
+body.white {font:bold 12pt garamond, times; color:white; background:black;}
+
+/* Tekst holovnyi */
+.caption {font:bold italic 10pt garamond, times; color:red; background:black;}

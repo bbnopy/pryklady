@@ -1,0 +1,21 @@
+#VRML V2.0 utf8
+
+WorldInfo {
+    info "Special Edition, Using HTML, 4th Edition"
+}
+
+Background {
+    skyColor 1 1 1
+}
+
+DEF Pyramid Shape {
+    appearance Appearance {
+        material Material {
+            diffuseColor 0 0 1
+        }
+        texture ImageTexture {
+            url "bernie.gif"
+        }
+    }
+    geometry Box {}
+}

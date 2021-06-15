@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Snventarna vidomist</title>
+        <meta name="GENERATOR" content="<ozilla/2.0Gold (Win32)">
+    </head>
+    <body>
+        <server>
+            database.SQLTable("SELECT isbn,title,author,
+            publishers.pubname, quantity On Hand FROM books,
+            publishers WHERE books.publisherID = publishers.publisherID");
+        </server>
+        <p>
+            <a href="home.html">Home</a>
+        </p>
+    </body>
+</html>
