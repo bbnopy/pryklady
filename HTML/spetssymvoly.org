@@ -1,0 +1,41 @@
+* Tablytsia Spetssymvoliv
+
+| Kod Symvola | CHyslovyi kod | Mnemonichnyi kod | Nazva                                 |
+|-------------+---------------+------------------+---------------------------------------|
+| 9           | &#9           |                  | tabuliator                            |
+| 10          | &#10          |                  | kinets riadku( line feed )            |
+| 12          | &#12          |                  | kinets storinky( form feed )          |
+| 13          | &#13          |                  | povernennia karetky( carriagereturn ) |
+| 32          | &#32          |                  | probil                                |
+| 34          | &#34          | &quot\;          | priami lapky                          |
+| 38          | &#38          | &amp\;           | ampersand                             |
+| 45          | &#45          |                  | defis                                 |
+| 60          | &#60          | &lt\;            | znak menshe                           |
+| 62          | &#62          | &gt\;            | znak bilshe                           |
+| 153         | &#153         | &trade\;         | torhova marka                         |
+| 160         | &#160         | &nbsp\;          | nerozeyvnyi probil                    |
+| 162         | &#162         | &cent\;          | tsent                                 |
+| 163         | &#163         | &pound\;         | funt                                  |
+| 164         | &#164         | &curren\;        | znak valiuty                          |
+| 165         | &#165         | &yen\;           | iena                                  |
+| 166         | &#166         | &brvbar\;        | vertykalna chorta                     |
+| 167         | &#167         | &sect\;          | znak parahrafa                        |
+| 169         | &#169         | &copy\;          | znak kopiraita                        |
+| 171         | &#171         | &laquo\;         | liva drukarska lapka                  |
+| 172         | &#172         | &not\;           | znak zaperechennia                    |
+| 173         | &#173         |                  | miakyi perenos                        |
+| 174         | &#174         | &reg\;           | znak zareiestrovano                   |
+| 176         | &#176         | &deg\;           | znak hradusu                          |
+| 177         | &#177         | &plusmn\;        | znak plius minus                      |
+| 178         | &#178         | &sup2\;          | stupin 2                              |
+| 179         | &#179         | &sup3\;          | stupin 3                              |
+| 181         | &#181         | &micro\;         | znak mikro                            |
+| 182         | &#182         | &para\;          | znak abzatsu                          |
+| 183         | &#183         | &middot\;        | krapka-marker                         |
+| 185         | &#185         | &sup1\;          | stupin 1                              |
+| 187         | &#187         | &raquo\;         | prava drukarska lapka                 |
+| 188         | &#188         | &frac14\;        | odna chetverta                        |
+| 189         | &#189         | &frac12\;        | odna druha                            |
+| 215         | &#215         | &times\;         | znak mnozhennia( khrestyk )           |
+| 247         | &#247         | &divide\;        | znak dilennia                         |
+| 8203        | &#8203        |                  | probil nulovoi shyryny                |

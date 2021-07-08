@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Storinka z knopkamy</title>
+  </head>
+  <script language="javascript">
+    var Stroka = "Novyi tekst elementa"
+    function DoFirst() {
+      document.forma02.text01.value = "Pochatkovyi tekst elementa"
+    }
+  </script>
+  <body bgcolor="white" text="blue" onload="DoFirst()">
+    <form name="forma02">
+      <table border="3" cellspacing="0" cellpading="10">
+        <tr>
+          <td>&nbsp;</td>
+          <td rowspan="2">
+            <textarea name="text01" rows="5" cols="20"></textarea>
+          </td>
+        </tr>
+        <input type="button" value="Sterty tekst" onClick="document.forma02.text01.value=' '">
+      </table>
+    </form>
+  </body>
+</html>

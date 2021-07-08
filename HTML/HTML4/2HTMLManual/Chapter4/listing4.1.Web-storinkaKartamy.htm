@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Vkazivnyk Web-storinky</title>
+  </head>
+  <body bgcolor="#fff" text="#000" link="#0000ff" vlink="#ff0000">
+    <center><h2>Pryklady map</h2></center>
+    <a name="verh"></a>
+    <p>Zobrazhennia map iliustruiut sposoby zavdannia koordynat oblastei dlia perekhodiv</p>
+    <hr>
+    <h2>Mapa 1</h2>
+    <map name="karta1">
+      <area shape="circle" coords="119,114,83" href="http://www.piter-press.ru" alt="kolo">
+      <area shape="poly" coords="74,242,180,250,249,239,242,278,31,276" href="start.htm" alt="bahatohranyk">
+    </map>
+    <map name="karta2">
+      <area shape="rect" coords="27,31,191,101" href="#verh" alt="perekhid do mapy 2">
+    </map>
+    <img src="map1.gif" alt="karta 1" usermap="#karta1">
+    <hr>
+    <p>Na tsii storintsi predstavleni dvi karty, yaki dozvoliaiut vykonuvaty rizni perekhody. Dlia pravylnoho funktsionuvannia storinky neobkhidno pereviryty vsi posylannia na faily, zadani za dopomohoiu atrybutiv <b>src</b> i <b>href</b>,</p>
+    <p>Klatsannia po zelenomu koli zabezpechyt perekhid do Web-storinky bydavnytstva "Piter", ZHovtyi bahatokutnyk poverne vas storinku Start.htm. CHervonyi priamokutnyk zabezpechuie perekhid na pochatok tsiiei storinky,</p>
+    <hr>
+    <h2>Mapa 2</h2>
+    <img src="map2.gif" alt="Mapa 2" usemap="#karta2">
+  </body>
+</html>

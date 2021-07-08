@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Storinka z chasamy</title>
+  </head>
+  <script language="javascript">
+    function Timer1() {
+      var D1 = new Date();
+      var TIME1 = " ";
+      TIME1 = D1.getHours()+": "+D1.getMinutes()+": "+D1.getSeconds()
+      document.forma01.dat.value=D1.toLocaleString();
+      document.forma01.vremya.value=TIME1;
+      setTimeout('Timer1()',2000)
+    }
+  </script>
+  <body onload="Timer1()" bgcolor="white" text="blue">
+    <form name="forma01">
+      <p>Povnyi format daty:<br></p>
+      <input type="text" name="dat" size="40">
+      <p>Potochnyi chas:<br></p>
+      <input type="text" name="vremya" size="8">
+    </form>
+  </body>
+</html>

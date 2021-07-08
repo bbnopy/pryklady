@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html" charset="windows-1251">
+    <title>Zmina zobrazhennia</title>
+    <script language="javascript">
+      AgentName = navigator.appName;
+      AgentVer = parseInt(navigator.appVersion);
+      if (AgentName == "Netscape" && AgentVer <= 2){
+        version = "n2";
+        1
+        else {
+          version = "x3";
+        }
+        if (version == "x3") {
+          // Persha knopka
+          IMAGE1on = new Image;
+          IMAGE1on.src = "str1on.jpg";
+          IMAGE1off = new Image;
+          // Druha knopka
+          IMAGE2on = new Image;
+          IMAGE2on.src = "str2on.jpg";
+          IMAGE2off = new Image;
+          IMAGE2off.src = "str2.jpg";
+        }
+        // Vkazivnyk zverkhu
+        function mouse_on(objekt) {
+          if (version == "x3") {
+            imgOn = eval(objekt + "on.src");
+            document[objekt].src = imgOn;
+          }
+        }
+        // Vkazivnyk ubran
+        function mouse_off(objekt) {
+          if (version == "x3") {
+            imgOff = eval(object + "off.src");
+            document[objekt].src = imgOff;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <table align="left" border="0" cellspacing="3" cellpadding="8">
+      <tr>
+        <!-- Persha knopka -->
+        <td>
+          <a href="url" onMouseover="mouse_on('IMAGE1')" onMouseout="mouse_off('IMAGE1')">
+            <img src="str1.jpg" alt="Page 1" name="IMAGE1" border="0" height="36" width="151x/a">
+          </a>
+        </td>
+        <!-- Druha knopka -->
+        <td>
+          <a href="url" onMouseover="mouse_on('IMAGE1')" onMouseout="mouse_off('IMAGE1')">
+            <img src="str1.jpg" alt="Page 1" name="IMAGE1" border="0" height="36" width="151x/a">
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

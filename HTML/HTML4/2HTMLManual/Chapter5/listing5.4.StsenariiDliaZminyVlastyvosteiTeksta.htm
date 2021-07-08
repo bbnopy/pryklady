@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Zmina koloru teksta</title>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+    <script>
+      // YAkshcho vkazivnyk myshi vstanovlen
+      function TextOnMouseOver(){
+        Element1 = window.event.srcElement;
+        Text1 = document.all("Par1");
+        if (Element1.tagName == "h2") {
+          Element1.style.color = "red";
+          Text1.innerText="Napys stav chervonyi?"
+          Text1.style.color="maroon"
+        }
+      }
+      // YAkshcho vkazivnyk myshi zabran
+      function TextOnMouseOut() {
+        Element1 = window.event.srcElement;
+        Text1 = document.all("Par1");
+        if (Element1.tagName == "h2") {
+          Element1.style.color = "green";
+          Text1.innerText='Vstanovit vkazivnyk myshi na napys "Zaholovok"'
+          Text1.style.color="blue"
+        }
+      }
+    </script>
+  </head>
+  <body bgcolor="white" text="green">
+    <p id="Par1">Vstanovit vkazivnyk myshi na napys "Zaholovok"</p>
+    <table border="0" cellspacing="0" cellpadong="0">
+      <tr>
+        <td>
+          <h2 onmouseover="TextOnMouseOver() onmouseout=TextOnMouseOut()">Zaholovok</h2>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

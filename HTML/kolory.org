@@ -1,20 +1,24 @@
 * Kolory HTML
 
-| Kolir   |                                | HEX     |
-|---------+--------------------------------+---------|
-| Aqua    | Morska khvylia                 | #00ffff |
-| Black   | Chornyi                        | #000    |
-| Blue    | Synii                          | #0000ff |
-| Fuchsia | Fuksiia                        | #ff00ff |
-| Gray    | Siryi                          | #808080 |
-| Green   | Zelenyi                        | #008000 |
-| Lime    | Lymonnyi                       | #00ff00 |
-| Maroon  | Temno-bordovyi                 | #800000 |
-| Navy    | Temno-synii                    | #000080 |
-| Olive   | Olyvkovyi                      | #808000 |
-| Purple  | Fioletovyi                     | #800080 |
-| Red     | Chervonyi                      | #ff0000 |
-| Silver  | Sribliastyi                    | #c0c0c0 |
-| Teal    | Zelenuvato-blakytnyi, elektryk | #008080 |
-| White   | Bilyi                          | #fff    |
-| Yellow  | Zhivtyi                        | #ffff00 |
+| Kolir   |                                     | HEX     |
+|---------+-------------------------------------+---------|
+| Aqua    | Morska khvylia/Akcamaryn            | #00ffff |
+| Black   | CHornyi                             | #000    |
+| Blue    | Synii                               | #0000ff |
+| Fuchsia | Fuksiia                             | #ff00ff |
+| Gold    | Zolotyi                             | #ffd700 |
+| Gray    | Siryi                               | #808080 |
+| Green   | Zelenyi                             | #008000 |
+| Indiho  | Indiho                              | #4b0080 |
+| Lime    | Lymonnyi/Svitlo-zelenyi             | #00ff00 |
+| Maroon  | Temno-bordovyi/Kashtanovyi          | #800000 |
+| Navy    | Temno-synii/Ultramaryn              | #000080 |
+| Olive   | Olyvkovyi                           | #808000 |
+| Orange  | Pomaranchevyi                       | #ffa500 |
+| Purple  | Fioletovyi                          | #800080 |
+| Red     | CHervonyi                           | #ff0000 |
+| Silver  | Sribliastyi                         | #c0c0c0 |
+| Teal    | Zelenuvato-blakytnyi/Elektryk/Syzyi | #008080 |
+| Violet  | Fioletovui                          | #ee80ee |
+| White   | Bilyi                               | #fff    |
+| Yellow  | ZHovtyi                             | #ffff00 |
