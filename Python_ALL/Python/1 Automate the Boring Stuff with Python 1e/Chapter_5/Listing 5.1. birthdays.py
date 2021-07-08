@@ -13,4 +13,4 @@ while True:
         print('What is their birthday?')
         bday = input()
         birthdays[name] = bday
-        print('Bithday database updated.')
+        print('Birthday database updated.')
