@@ -1,6 +1,5 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/python,flask,visualstudiocode,eclipse
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,flask,visualstudiocode,eclipse
+# Created by https://www.toptal.com/developers/gitignore/api/python,flask,visualstudiocode,eclipse,virtualenv
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,flask,visualstudiocode,eclipse,virtualenv
 
 ### Eclipse ###
 .metadata
@@ -14,8 +13,6 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-.classpath
-.project
 
 # External tool builders
 .externalToolBuilders/
@@ -190,6 +187,9 @@ ENV/
 env.bak/
 venv.bak/
 
+.flaskvenv
+flaskvenv/
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -278,6 +278,18 @@ cython_debug/
 
 # Cython debug symbols
 
+### VirtualEnv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+pip-selfcheck.json
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -294,4 +306,4 @@ cython_debug/
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/python,flask,visualstudiocode,eclipse
+# End of https://www.toptal.com/developers/gitignore/api/python,flask,visualstudiocode,eclipse,virtualenv
