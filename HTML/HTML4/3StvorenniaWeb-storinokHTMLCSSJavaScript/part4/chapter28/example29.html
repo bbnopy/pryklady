@@ -1,0 +1,21 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>Taimer</title>
+        <script language="javascript">
+            var intsecond = 0;
+            function TimerGo(){
+                if (intsecond < 10 ){
+                    intsecond++;
+                    document.all.my_timer.innertext=intsecond+" ";
+                    settimeout('TimerGo()',1000)
+                }
+            }
+        </script>
+    </head>
+    <body onload="settimeout('TimerGo()',1000">
+        proishlo
+        <span id="my_timer"> 0 </span>
+        sekund
+    </body>
+</html>
