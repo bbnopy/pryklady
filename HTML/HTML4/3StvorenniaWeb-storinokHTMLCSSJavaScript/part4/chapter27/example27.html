@@ -1,0 +1,17 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>Object</title>
+        <script type="text/javascript">
+            Object.prototype.driver="Kozlevych";
+            function show(){
+                alert(this.driver);
+            }
+            Object.prototype.go=show;
+            var team=new Object();
+            team.go();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
