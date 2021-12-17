@@ -1,0 +1,18 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title></title>
+        <script language="javascript">
+            function clockGo(){
+                var time=new Date();
+                var temp=time.toLocaleString();
+                document.all.clock.value=temp;
+                setTimeout("clockGo()",1000);
+            }
+        </script>
+    </head>
+    <body>
+        <h2 onmouseover="clockGo()">Chasy</h2>
+        <input type="text" id="clock" size="18" value="">
+    </body>
+</html>
