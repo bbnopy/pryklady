@@ -1,0 +1,34 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>navigator</title>
+        <script language="javascript">
+            function getnavigator(){
+                var name, ver;
+                if (navigator.appname == 'microsoft internet explorer'){
+                    name="internet explorer";
+                    // ziasovuiemo nomer versii dlia IE
+                    if (navigator.appversion.indexof("msie 4") > 0 ) ver=4;
+                    else if (navigator.appversion.indexof("msie 5.5") > 0 ) ver=5.5;
+                    else if (navigator.appversion.indexof("msie 5") > 0 ) ver=5;
+                }
+                else if (navigator.appname == "netscape"){
+                    name = "netscape navigator";
+                    // ziasovuiemo nomer versii dlia NN
+                    if (parseint(navigator.appversion) == 5)
+                        ver = 6;
+                    else
+                        ver = "4 abo dazhe bilsh ranii";
+                }
+                else {
+                    name = "nerozpiznannyi brauzer";
+                }
+                alert("pdaietsia, shcho u vas vstanovleno "+name+" versiia "+ver);
+                // document.write("<p>vy korystuietes brauzerom "+name+ver+"</p>");
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" name="navigator" value="ziasuvaty brauzer" onclick="getnavigator();">
+    </body>
+</html>
