@@ -1,0 +1,19 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>All</title>
+        <script type="text/javascript">
+            function review(obj){
+                var result=''
+                for(var i in obj){
+                    result+='document.all(' +i+ ') = ' +obj[i].name+obj[i]+'<br>'
+                }
+                return result;
+            }
+        </script>
+    </head>
+    <body bgcolor="#fff">
+        <a href="http://www.myserver.ua/file.html">TSe posylannia</a>
+        <input type="button" value="properties" onclick="document.write(review(document.links))">
+    </body>
+</html>
