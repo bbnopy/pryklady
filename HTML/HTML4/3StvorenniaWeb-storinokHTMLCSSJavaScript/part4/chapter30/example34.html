@@ -1,0 +1,19 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>Pryklad z obrobnykom</title>
+    </head>
+    <body id="my_body">
+        <h1 id="my_element">Element zaholovku</h1>
+        <script type="text/javascript">
+            document.all.my_element.onclick=my_fun;
+            function my_fun(){
+                alert('TSe buv zaholovok');
+            }
+            document.all.my_body.onclick=my_fun1;
+            function my_fun1(){
+                alert('A tse vzhe ne zaholovok');
+            }
+        </script>
+    </body>
+</html>
