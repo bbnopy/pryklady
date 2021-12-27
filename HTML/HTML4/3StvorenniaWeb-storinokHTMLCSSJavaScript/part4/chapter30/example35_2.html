@@ -1,0 +1,33 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>Parametry</title>
+        <style id="version_1" type="text/css">
+            #my_div1 {color: #aa3355; font-style: italic;}
+            #my_div2 {color: #000; font-style: normal;}
+        </style>
+        <style id="version_2" type="texy/css" disabled>
+            #my_div1 {color:#000; font-style:normal;}
+            #my_div2 {color;#aa3355; font-style:italic;}
+        </style>
+        <script type="text/javascript">
+            function change_style() {
+                if(document.styleSheets['version_1'].disabled) {
+                    document.styleSheets['version_1'].disabled=false;
+                    document.styleSheets['version_2'].disabled=true;
+                }
+                else {
+                    document.styleSheets['version_1'].disabled=true;
+                    document.styleSheets['version_2'].disabled=false;
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: white;">
+        <h2>Demonstruvannia zminy stylia</h2>
+        <div id="my_div1">- Lyshe pomirkuite, pozhyraty trupy vbytykh tvaryn! Liudozherstvo pid vyhliadom kultury! Usi khvoroby cherez miaso.</div>
+        <div id="my_div2">Zvisno, - z soromiazlyvoiu ironiieiu skazala Lisa, napryklad anhina.</div>
+        <br>
+        <input type="Submit" name="press" value="Zminiuii styl" onclick="change_style();">
+    </body>
+</html>
