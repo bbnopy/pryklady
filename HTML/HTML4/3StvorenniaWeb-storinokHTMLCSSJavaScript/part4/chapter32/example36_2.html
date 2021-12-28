@@ -1,0 +1,23 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>TextRange</title>
+        <script language="javascript">
+            function checkcreate() {
+                var my_TextRange = documnet.body.createTextRange();
+                if (my_TextRange != null) {
+                    alert(my_TextRange.htmlText);
+                }
+                else alert("obiekt ne stvoreno");
+            }
+        </script>
+    </head>
+    <body>
+        ... na moiemu pamiatnyku bude vysicheno:
+        <blockquote sty;e="font:italic bold; font-family:'arial';">tut lezhyt vidomyi teplotekhnik i vynyshchuvach
+            <span id="fullname">ostap-suleiman-berta-mariia-benderbei</span>,
+            batko yakoho buv turetskym piddanym...
+        </blockquote>
+        <input type="button" value="Pereviriaiemo vlastyvosti createTextRange()" id="button1" name="button1" onclick="checkCreate()">
+    </body>
+</html>
