@@ -1,0 +1,27 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>Zmina kodu HTML</title>
+        <script type="text/javascript">
+            var str = '<i>Podibne vrazhennia pryzvodyt stara banka z-pid konserviv na liudozhera...</i>'
+            var str1 = 'Na Elochku <em>rich</em> spravyla charivne vrazhennia...'
+            function init() {
+                document.all.my_text.innerHTML=str1;
+            }
+        </script>
+    </head>
+    <body onload="init();">
+        <h1>Liudozherka Elochka</h1>
+        <p>I Ostap vytiah z karmnanu malenke pozolochene sitechko</p>
+        <p id="my_text"></p>
+        <input type="button" value="Zminyty vlastyvosti outerHTML" onclick="alert(document.all.my_text.outerHTML); document.all.my_text.outerHTML=str;">
+        <br><br>
+        <input type="button" value="Zminyty vlastyvosti innerHTML" onclick="alert(document.all.my_text.outerHTML); document.all.my_text.outerHTML=str;">
+        <br><br>
+        <input type="button" value="Zminyty vlastyvosti innerHTML" onclick="alert(document.all.my_text.innerHTML); document.all.my_text.innerHTML=str; alert(document.all.my_text.innerHTML);">
+        <br><br>
+        <input type="button" value="Zminyty vlastyvosti outerText" onclick="alert(document.all.my_text.outerText); document.all.my_text.outerText=str;">
+        <br><br>
+        <input type="button" value="Zminyty vlastyvosti innerText" onclick="alert(document.all.my_text.innerTetx); document.all.my_text.innerTetx=str;">
+    </body>
+</html>
