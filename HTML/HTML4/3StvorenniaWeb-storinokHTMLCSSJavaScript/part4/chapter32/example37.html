@@ -1,0 +1,36 @@
+<!DOCTYPE html public"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>Metod find</title>
+    </head>
+    <body>
+        ... na moiemu pamiatnyku bude vysicheno:
+        <blockquote sty;e="font:italic bold; font-family:'arial';">tut lezhyt vidomyi teplotekhnik i vynyshchuvach
+            <span id="fullname">Ostap-Suleiman-Berta-Mariia Benderbei</span>,
+            batko yakoho buv turetskym piddanym...
+        </blockquote>
+        <script language="javascript">
+            var my_TextRange = document.body.createTextRange();
+            // zapysuietsia potochnyi stan yak zakladka
+            var my_Mark = my_TextRange.getBookmark();
+            // nezalezhnyi poshuk vid rehistru
+            my_TextRange.findText('ostap');
+            // vydiliaiemo obieky na ekrani
+            my_TextRange.select();
+            alert(my_TextRange.htmlText)
+            // zmina TextRange
+            my_TextRange.moveToBookmark(my_Mark);
+            alert(my_TextRange.text)
+            // false - nevdalyi poshuk tsiloho slova
+            my_TextRange.fendText('Bender', 0, 2);
+            my_TextRange.select();
+            alert(my_TextRange.htmlText)
+            my_TextRange.moveToBookmark(my_Mark);
+            // false - nevdalyi poshuk z urakhuvanniam rehistru
+            my_TextRange.findText('Bender', 0, 4);
+            my_TextRange.select();
+            alert(my_TextRange.htmlText)
+            // povernrnnia do zakladky
+        </script>
+    </body>
+</html>
