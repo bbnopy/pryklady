@@ -93,3 +93,53 @@
 |      u     |           |          |         | pidkreslenyi tekst |
 |     ul     |           |          |         | nevporiadkovanyi spysok |
 |     var    |           |          |         | ekzempliar zminnoi abo arhumentu prohrammy |
+
+# Literaly i kody
+
+| Symvol | TSyfrovyi kod |   HTML   |
+|--------|---------------|----------|
+|    "   |     &#34;     |  &quot;  |
+|    &   |     &#38;     |   &amp;  |
+|    <   |     &#60;     |   &lt;   |
+|    >   |     &#62;     |   &gt;   |
+|        |     &#160;    |  &nbsp;  |
+|   (r)  |     &#174;    |   &reg;  |
+|   (c)  |     &#169;    |  &copy;  |
+|  (tm)  |     &#153;    |          |
+|   <<   |     &#171;    |  &laquo; |
+|   >>   |     &#187;    |  &raquo; |
+|    P   |     &#182;    |  &para;  |
+|    u   |     &#181;    |  &micro; |
+|    Ю   |     &#183;    | &middot; |
+|    -   |     &#150;    |          |
+|    _   |     &#151;    |          |
+|   +-   |     &#177;    | &plusmn; |
+|    o   |     &#176;    |   &deg;  |
+|   -|   |     &#172;    |   &not;  |
+|   :    |     &#166;    | &brvbar; |
+|   SS   |     &#167;    |  &sect;  |
+|    o   |     &#164;    | &curren; |
+|    №   |     &#185;    |  &sup1;  |
+|    I   |     &#178;    |  &sup2;  |
+|    j   |     &#188;    | &frac14; |
+|    S   |     &#189;    | &frac12; |
+|    s   |     &#190;    | &frac34; |
+|    T   |     &#191;    | &iquest; |
+|    У   |     &#161;    |  &iexel; |
+|    Ё   |     &#168;    |   &uml;  |
+|    Ч   |     &#215;    |  &times; |
+|    Ш   |     &#216;    | &Oslash; |
+|    Ж   |     &#230;    |  &aelig; |
+|    Ж   |     &#198;    |  &Aelig; |
+|    у   |     &#162;    |  &cent;  |
+|    J   |     &#163;    |  &pound; |
+|    Г   |     &#165;    |   &yen;  |
+|    t   |    &#9830;    |  &diams; |
+|   /=   |    &#8800;    |   &ne;   |
+|   =_   |    &#8801;    |  &equiv; |
+|   oo   |    &#8734;    |  &infin; |
+|    I   |    &#8721;    |   &sum;  |
+|   ->   |    &#8592;    |  &larr;  |
+|   ^|   |    &#8593;    |  &uarr;  |
+|   <-   |    &#8594;    |  &rarr;  |
+|    i   |    &#8595;    |  &darr;  |
