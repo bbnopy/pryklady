@@ -31,6 +31,23 @@
             my_TextRange.select();
             alert(my_TextRange.htmlText)
             // povernrnnia do zakladky
+            my_TextRange.moveToBookmark(my_Mark);
+            // true - uspishnyi poshuk Usoho slova z urakhuvanniam rehistru
+            my_textRange.findText('Benderbei', 0, 6);
+            my_TextRange.select();
+            alert(my_TextRange.htmlText)
+            // povernennia do zakladky
+            my_TextRange.moveToBookmark(my_Mark);
+            // khlopaie oblast do tochky
+            my_TextRange.collapse();
+            // false - nevdalyuo poshuk v oblasti skhlopu
+            my_TextRange.findText('Benderbei', 0, 6);
+            my_TextRange.select();
+            alert(my_TextRange.htmlText)
+            // true - tretii parametr ne zadanyi
+            my_TextRange.findText('Be');
+            my_TextRange.select();
+            alert(my_TextRange.htmlText)
         </script>
     </body>
 </html>
