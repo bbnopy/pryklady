@@ -287,3 +287,50 @@
 | whitesmoke | #f5f5f5 | 245 245 245 |
 | yellow | #ffff00 | 255 255 0 |
 | yellowgreen | #9acd32 | 154 205 50 |
+
+# MIME-typ dannykh
+
+| Typ dannykh | Opys | Rozshyrennia |
+|-------------|------|--------------|
+| text/rischtext | teks u formati RTF | rtf |
+| text/rtf | - | - |
+| text/plain | tekst ASCII | txt |
+| text/html | tekst HTML i XHTML 1.0 | htm, html |
+| text/sgml | tekst SGML | sgml |
+| text/xml | tekst XML | xml |
+| text/css | tekst CSS | | css |
+| text/javascript | tekst JavaScript | js |
+| multipart/form-data | danni HTML-formy | - |
+| multipart/mixed | zmishani danni | - |
+| audio/x-aiff | zvuk AIFF | aif, aiff |
+| audio/basic | zvuk BASIC | au |
+| audio/wav | zvuk wav | wav |
+| audio/midi | zvuk MIDI | mid, midi |
+| audio/nspaudio | zvuk Netscape Packed Audio | la, lma |
+| audio/rmf | zvuk RMF | rmf |
+| audio/realaudio | zvuk dlia RealPlayer | rpm |
+| image/gif | zobrazhennia GIF | gif |
+| image/jpeg | zobrazhennia JPEG | jpg, jpeg |
+| image/pjpeg | zobrazhennia P-JPEG | jpg, jpeg |
+| image/tiff | zobrazhennia TIFF | tif, tiff |
+| image/png | zobrazhennia PNG | png |
+| image/bmp | zobrazhennia Windows Bitmap | bmp |
+| image/x-wmf | zobrazhennia Windows Metafile | wmf |
+| image/x-emf | Zobrazhennia Windows En. Metafile | emf |
+| image/ief | Zobrazhennia Exchange Format | ief |
+| video/avi | videoklip Windows AVI | avi |
+| video/quicktime | vidieoklip Macintosh QuickTime | mov |
+| video/mpeg | vidieoklip MPEG | mpe, mpeg |
+| model/vrml | model VRML | wrl |
+| application/postscript | fail v Postscript | ps |
+| application/base64 | fail u koduvanni BASE64 | - |
+| application/macbinhex40 | dodatok dlia Macintosh | - |
+| application/pdf | fail Adobe Acrobat | pdf |
+| application/x-compressed | arkhiv | - |
+| application/zip | arkhiv ZIP | zip |
+| application/msword | fail Microsoft Word | doc |
+| application/msexcel | fail Microsoft Excel | xls |
+| application/idp | profil zavantazhennia failu | idp |
+| application/Java | dodatok na Java | java |
+| application/futuresplash | fail Future Splash | spl |
+| application/shockwave-flash | fail Shockwave Flash | swf |
